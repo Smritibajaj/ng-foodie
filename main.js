@@ -1,4 +1,4 @@
-var foodieApp = angular.module('foodieApp',,['ngRoute']);
+var foodieApp = angular.module('foodieApp',['ngRoute']);
 foodieApp.config(function ($routeProvider) {
 	$routeProvider
 	.when('/',{
@@ -10,13 +10,13 @@ foodieApp.config(function ($routeProvider) {
 		controller: 'mainController'
 	})
 })
-foodieApp.controller('loginController',function($scope) {
+foodieApp.controller('loginController',function($scope, $location) {
     $scope.goToHome = function() {
         //console.log('Do Something')
         $location.url('home')
 	}
 })
-foodieApp.controller('mainController',function($scope) {
+foodieApp.controller('mainController',function($scope, $location) {
 	$scope.restaurants = [{
         name: 'Farzi Cafe',
         address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
