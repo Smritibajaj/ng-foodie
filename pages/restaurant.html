@@ -1,17 +1,17 @@
-<div>Restaurant Info goes here</div>
-<h1>Show Restaurant {{restaurantId}} details here</h1>
+
+    <div>Restaurant Info goes here</div>
 <div class="restaurant"  ng-if="restaurant.name"><!--ng-if to check valid pages-->
     <div class="rest-wrapper">
         <div class="image">
-            <img src="{{restaurant.image}}" height="100" width="100">
+            <img ng-src="{{restaurant.image}}" height="100" width="100">
         </div>
         <div class="rest-info">
             <div class="rest-category">
                <small>{{restaurant.category}} </small>
             </div>
             <div class="rest-name">
-            <strong>{{restaurant.name}}</strong>
-            </div>
+                    <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
+                </div>
             <div>
                <strong> {{restaurant.location}}</strong>
             </div>
